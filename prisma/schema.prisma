@@ -1,0 +1,53 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Project {
+  id          String   @id @default(uuid())
+  title       String
+  unit        String   // "ABU" or "DNBU"
+  shortDesc   String   @db.Text
+  fullDesc    String   @db.Text
+  objectives  String[] // Key areas or aims
+  imageUrl    String?
+  createdAt   DateTime @default(now())
+}
+
+model Member {
+  id          String   @id @default(uuid())
+  name        String
+  role        String
+  category    String   // "MEMBER" (Braiv Lab Members), "VISITING" (Visiting Members), "ALUMNI" (Alumni Members)
+  bio         String?  @db.Text
+  imageUrl    String?
+  email       String?
+  linkedin    String?
+  scholarUrl  String?
+  orderIndex  Int      @default(0)
+}
+
+model Publication {
+  id          String   @id @default(uuid())
+  title       String
+  authors     String
+  journal     String
+  year        Int
+  doi         String?
+  linkUrl     String?
+  abstract    String?  @db.Text
+  createdAt   DateTime @default(now())
+}
+
+model ContactMessage {
+  id          String   @id @default(uuid())
+  name        String
+  email       String
+  subject     String?
+  message     String   @db.Text
+  createdAt   DateTime @default(now())
+}

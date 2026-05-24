@@ -1,0 +1,174 @@
+.headerSection {
+  padding: 5rem 0 3rem 0;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  background: rgba(11, 14, 30, 0.2);
+}
+
+.introSection {
+  padding: 5rem 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.introText {
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.highlightPanel {
+  background: rgba(0, 242, 254, 0.02);
+  border: 1px solid rgba(0, 242, 254, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.highlightPanel p {
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Track Opportunities Grid */
+.tracksGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  padding: 4rem 0;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 768px) {
+  .tracksGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.trackCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.trackHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.trackIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trackIcon.undergrad {
+  background: rgba(252, 211, 77, 0.08);
+  color: var(--secondary);
+  border: 1px solid rgba(252, 211, 77, 0.15);
+}
+
+.trackIcon.grad {
+  background: rgba(0, 242, 254, 0.08);
+  color: var(--primary);
+  border: 1px solid rgba(0, 242, 254, 0.15);
+}
+
+.trackTitle {
+  font-size: 1.6rem;
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+}
+
+.trackIntro {
+  font-size: 0.975rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.listTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.listItems {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.listItems li {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  line-height: 1.45;
+}
+
+.listItems li::before {
+  content: '✓';
+  color: var(--primary);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.trackCard.abuTrack .listItems li::before {
+  color: var(--secondary);
+}
+
+/* Call to Action panel */
+.ctaPanel {
+  background: linear-gradient(135deg, rgba(11, 14, 30, 0.8) 0%, rgba(7, 9, 19, 0.95) 100%);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 4rem 2rem;
+  text-align: center;
+  margin: 4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaPanel::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 242, 254, 0.02) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.ctaTitle {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-heading);
+}
+
+.ctaText {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+}

@@ -1,0 +1,169 @@
+.headerSection {
+  padding: 5rem 0 3rem 0;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  background: rgba(11, 14, 30, 0.2);
+}
+
+.unitSection {
+  padding: 5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.unitSection:last-child {
+  border-bottom: none;
+}
+
+.unitLayout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+.unitMeta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.unitTitle {
+  font-size: 2.25rem;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-heading);
+}
+
+.unitTitle.abu {
+  background: linear-gradient(135deg, #ffffff 40%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.unitTitle.dnbu {
+  background: linear-gradient(135deg, #ffffff 40%, var(--primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+}
+
+.aimsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.aimCard {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  align-items: flex-start;
+}
+
+.aimNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 0.85rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  font-family: var(--font-heading);
+}
+
+.aimNumber.abu {
+  background: rgba(252, 211, 77, 0.1);
+  color: var(--secondary);
+  border: 1px solid var(--secondary);
+}
+
+.aimNumber.dnbu {
+  background: rgba(0, 242, 254, 0.1);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.aimContent h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.aimContent p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Methodologies list */
+.methodologySection {
+  background: rgba(11, 14, 30, 0.4);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2.5rem;
+}
+
+.methodTitle {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.75rem;
+}
+
+.methodGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .methodGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .methodGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.methodCard {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.01);
+  border-radius: 6px;
+  border-left: 2px solid var(--border);
+}
+
+.methodCard.abu {
+  border-left-color: var(--secondary);
+}
+.methodCard.dnbu {
+  border-left-color: var(--primary);
+}
+
+.methodCard h5 {
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+}
+
+.methodCard p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
